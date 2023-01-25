@@ -1,8 +1,7 @@
-import prisma from "../config/database";
+import prisma from "../config/database.js";
 
 async function getCars() {
-  const data = await db.query(`SELECT * FROM cars`);
-  return data.rows;
+  return await prisma.cars.findMany();
 }
 
 async function getCar(id: number) {
@@ -20,14 +19,17 @@ async function getCarWithLicensePlate(licensePlate: string) {
 async function createCar(
   model: string,
   licensePlate: string,
-  year: number,
+  year: string,
   color: string
 ) {
-  await db.query(
-    `INSERT INTO cars (model, "licensePlate", year, color)
-     VALUES ($1, $2, $3, $4)`,
-    [model, licensePlate, year, color]
-  );
+  return await prisma.cars.create({
+    data: {
+      model,
+      licensePlate,
+      year,
+      color,
+    },
+  });
 }
 
 async function deleteCar(id: number) {
