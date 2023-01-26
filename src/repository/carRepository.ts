@@ -19,7 +19,7 @@ async function getCarWithLicensePlate(licensePlate: string) {
 async function createCar(
   model: string,
   licensePlate: string,
-  year: string,
+  year: number,
   color: string
 ) {
   return await prisma.cars.create({
@@ -42,7 +42,7 @@ async function updateCar(
   id: number,
   model: string,
   licensePlate: string,
-  year: string,
+  year: number,
   color: string
 ) {
   return await prisma.cars.update({
