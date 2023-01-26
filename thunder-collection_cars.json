@@ -65,7 +65,7 @@
       "params": [],
       "body": {
         "type": "json",
-        "raw": "{\n  \"model\": \"SAVEIRO\",\n  \"licensePlate\": \"AKI8877\",\n  \"year\": \"2010\",\n  \"color\": \"CINZA\"\n}",
+        "raw": "{\n  \"model\": \"SAVEIRO\",\n  \"licensePlate\": \"AKI8877\",\n  \"year\": 2010,\n  \"color\": \"CINZA\"\n}",
         "form": []
       },
       "tests": []
@@ -110,7 +110,7 @@
       "params": [],
       "body": {
         "type": "json",
-        "raw": "{\n  \"model\": \"HB20\",\n  \"licensePlate\": \"ABC9090\",\n  \"year\": \"2001\",\n  \"color\": \"BRANCO\"\n}",
+        "raw": "{\n  \"model\": \"HB20\",\n  \"licensePlate\": \"ABC9090\",\n  \"year\": 2001,\n  \"color\": \"BRANCO\"\n}",
         "form": []
       },
       "tests": []

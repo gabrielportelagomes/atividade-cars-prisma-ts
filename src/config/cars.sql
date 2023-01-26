@@ -2,7 +2,7 @@ CREATE TABLE cars (
   id SERIAL PRIMARY KEY,
   model TEXT NOT NULL,
   "licensePlate" TEXT NOT NULL UNIQUE,
-  year TEXT NOT NULL,
+  year INTEGER NOT NULL,
   color TEXT NOT NULL,
   "createAt" TIMESTAMP DEFAULT NOW()
 );

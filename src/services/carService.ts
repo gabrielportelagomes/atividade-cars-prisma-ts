@@ -19,7 +19,7 @@ async function getCar(id: number) {
 async function createCar(
   model: string,
   licensePlate: string,
-  year: string,
+  year: number,
   color: string
 ) {
   const car = await carRepository.getCarWithLicensePlate(licensePlate);
@@ -41,7 +41,7 @@ async function updateCar(
   id: number,
   model: string,
   licensePlate: string,
-  year: string,
+  year: number,
   color: string
 ) {
   await getCar(id);
