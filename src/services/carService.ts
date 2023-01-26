@@ -44,7 +44,10 @@ async function updateCar(
   year: number,
   color: string
 ) {
-  await getCar(id);
+  const car = await carRepository.getCar(id);
+  if (!car) {
+    throw notFoundError();
+  }
   await carRepository.updateCar(id, model, licensePlate, year, color);
 }
 
